@@ -51,7 +51,7 @@ int main()
 
 	WSAStartup(MAKEWORD(2, 0), &WSAData);
 	server = socket(AF_INET, SOCK_STREAM, 0); // TCP connection initialization
-	addr.sin_addr.s_addr = inet_addr("172.16.160.10"); //target of the tcp (listening address)
+	addr.sin_addr.s_addr = inet_addr("<host_ip>"); //target of the tcp (listening address)
 	addr.sin_family = AF_INET; //set address family to af_inet - ipv4 address
 	addr.sin_port = htons(5555); // remote port (listening port)
 	connect(server, (SOCKADDR *)&addr, sizeof(addr)); // connects everything
